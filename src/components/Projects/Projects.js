@@ -19,12 +19,19 @@ const Projects = () => (
             </HeaderThree>
           </TitleContent>
           <CardInfo>{project.description}</CardInfo>
-          <TitleContent>Stack</TitleContent>
-          <TagList>
-            {project.tags.map((tag, i) => (
-                <Tag key={i}>{tag}</Tag>
-            ))}
-          </TagList>
+          <div>
+            <TitleContent>Stack</TitleContent>
+            <TagList>
+              {project.tags.map((tag, i) => (
+                  <Tag key={i}>{tag}</Tag>
+              ))}
+            </TagList>
+          </div>
+
+          <UtilityList>
+            <ExternalLinks href={project.visit}>Code </ExternalLinks>
+            <ExternalLinks href={project.source}>Source </ExternalLinks>
+          </UtilityList>
           </BlogCard>
       
       ))}
