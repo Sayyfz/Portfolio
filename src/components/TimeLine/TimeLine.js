@@ -50,8 +50,8 @@ const Timeline = () => {
         </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
-          {TimeLineData.map((item, i) => (
-            <CarouselMobileScrollNode key={index} final={index===TOTAL_CAROUSEL_COUNT - 1}>
+          {TimeLineData.map((item, index) => (
+            <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
               <CarouselItem
                 index={index}
                 id={`carouse__item-${index}`}
